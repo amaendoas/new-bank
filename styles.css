@@ -7,8 +7,8 @@
 :root {
   --bg: #FAEDE2;
   --text: #111E0F;
-  --primary: #3C5232;
-  --highlight: #E7A4d4;
+  --primary: #52784F;
+  --highlight: #E7A4D4;
   --white: #fff
 }
 
@@ -39,11 +39,13 @@ button {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   height: 100px;
   width: 100%;
   border-bottom: 1px solid;
+  z-index: 1;
 }
 
 .logo {
@@ -56,15 +58,17 @@ header {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 }
 
 nav {
-  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bg);
 }
 
 .menu {
@@ -115,4 +119,76 @@ nav div button:nth-child(2) {
 nav div button:nth-child(2):hover {
   color: var(--text);
   background-color: var(--bg);
+}
+
+section button {
+  border: 1px solid var(--primary);
+  background-color:  var(--primary);
+  color: var(--bg);
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+main section {
+  width: 100%;
+  height: 100vh;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  max-width: 500px;
+}
+
+.main p {
+  margin: 10px 0 20px;
+}
+
+.main button:hover {
+  filter: brightness(1.1)
+}
+
+.main h1 span:nth-child(1) {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.main h1 span:nth-child(2){
+  color: var(--highlight);
+  font-weight: 700;
+}
+
+.main figure {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main .start-button {
+  display: flex;
+  gap: 10px;
+}
+
+.main h1 {
+  font-size: 42px;
+  font-weight: 400;
+}
+
+aside figure {
+  position: relative;
+}
+
+aside img:nth-child(2) {
+  position: absolute;
+  left: -70px;
+  top: -50px;
+}
+
+footer .logo {
+  width: fit-content;
+  padding: 0 20px;
 }
