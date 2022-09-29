@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #FAEDE2;
+  --text: #111E0F;
+  --primary: #3C5232;
+  --highlight: #E7A4d4;
+  --white: #fff
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body, button, a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+.logo {
+  background-color: var(--text);
+  color: var(--bg);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  letter-spacing: -4px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 50%;
+}
+
+nav div a {
+  transition: 0.3s;
+}
+
+nav div a:hover {
+  color: var(--primary);
+  font-weight: 500;
+  border-bottom: 2px solid var(--primary);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+nav div button {
+  transition: 0.3s;
+}
+
+nav div button:nth-child(1) {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+nav div button:nth-child(1):hover {
+  border: 1px solid var(--text);
+  border-radius: 10px;
+}
+
+nav div button:nth-child(2) {
+  border: 1px solid var(--text);
+  color: var(--bg);
+  background-color: var(--text);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+nav div button:nth-child(2):hover {
+  color: var(--text);
+  background-color: var(--bg);
+}
